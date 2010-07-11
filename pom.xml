@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.codehaus</groupId>
@@ -30,6 +31,16 @@
     </resources>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>2.2-beta-5</version>
+          <configuration>
+            <descriptors>
+              <descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor>
+            </descriptors>
+          </configuration>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
@@ -66,9 +77,9 @@
   <contributors />
 
   <scm>
-    <connection>scm:git:git://git.codehaus.org/jbehave-site.git</connection> 
+    <connection>scm:git:git://git.codehaus.org/jbehave-site.git</connection>
     <developerConnection>scm:git:ssh://git@git.codehaus.org/jbehave-site.git</developerConnection>
     <url>http://git.codehaus.org/gitweb.cgi?p=jbehave-site.git</url>
   </scm>
-  
+
 </project>
