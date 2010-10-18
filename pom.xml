@@ -7,7 +7,7 @@
   </parent>
   <groupId>org.jbehave.site</groupId>
   <artifactId>jbehave-site</artifactId>
-  <version>3.1-SNAPSHOT</version>
+  <version>3.1</version>
   <packaging>pom</packaging>
   <name>JBehave Site</name>
   <description>JBehave Site provide site resources and templates for use by JBehave documentations and distributions</description>
