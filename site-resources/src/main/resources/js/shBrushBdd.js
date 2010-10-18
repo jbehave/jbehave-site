@@ -5,7 +5,7 @@
  */
 SyntaxHighlighter.brushes.Bdd = function()
 {
-	var keywords =	'Given When Then And Scenario GivenScenarios Examples ExamplesTable ExamplesTableRow Pending NotPerformed Failed';
+	var keywords =	'Given When Then And Meta @ Narrative Scenario GivenStories Examples Example PENDING NOT PERFORMED FAILED DRY RUN';
 	
 	this.regexList = [
 		{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' }		// bdd keyword
