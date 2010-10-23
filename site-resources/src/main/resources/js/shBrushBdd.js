@@ -15,4 +15,4 @@ SyntaxHighlighter.brushes.Bdd = function()
 };
 
 SyntaxHighlighter.brushes.Bdd.prototype	= new SyntaxHighlighter.Highlighter();
-SyntaxHighlighter.brushes.Bdd.aliases		= ['bdd'];
+SyntaxHighlighter.brushes.Bdd.aliases		= ['bdd', 'story', 'scenario', 'txt'];
