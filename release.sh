@@ -22,6 +22,7 @@ if [ "$NAME" == "" ] || [ "$VERSION" == "" ] || [ "$QUALIFIER" == "" ] || [ "$NE
   echo "usage: release.sh <name> <version> <qualifier> <next>"
   echo "e.g.: release.sh jbehave 3.3-beta-1 preview 3.3-SNAPSHOT"
   echo "e.g.: release.sh jbehave 3.3 stable 3.4-SNAPSHOT"
+  echo "N.B.: if you don't define the pgp.passphrase property in a 'release' profile (c.f. setup at top of script), it will be prompted."
   exit;
 fi
 
@@ -32,8 +33,12 @@ CWD=`pwd`
 
 cd $CWD/distribution
 ./upload-download.sh $VERSION $QUALIFIER
-./upload-references.sh $VERSION $QUALIFIER
+./upload-reference.sh $VERSION $QUALIFIER
 cd $CWD
 
-# From Nexus Staging: close and release 
+echo "The release $NAME $VERSION $QUALIFIER has been staged."
+
+echo "Next steps are:"
+echo "- Nexus Staging Repository (https://nexus.codehaus.org/index.html#stagingRepositories) to close and release the jbehave staging."
+echo "- git push changes to remotes"
 
