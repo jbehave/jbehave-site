@@ -1,3 +1,4 @@
+set -e
 # Requires the 'release' profile in your ~/.m2/settings.xml
 #
 #    <profile>

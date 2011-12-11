@@ -1,0 +1,25 @@
+<sitemap>
+  <section>
+    <name>About</name>
+    <page>index.html</page>
+    <page>license.html</page>
+    <page>download.html</page>
+    <page>tutorials.html</page>
+    <page>users-experiences.html</page>
+  </section>
+  <section> 
+    <name>Reference Guides</name>
+    <link title="Core Stable">http://jbehave.org/reference/stable</link>
+    <link title="Core Preview">http://jbehave.org/reference/preview</link>
+    <link title="Core Latest">http://jbehave.org/reference/latest</link>
+    <link title="Web Stable">http://jbehave.org/reference/web/stable</link>
+    <link title="Web Preview">http://jbehave.org/reference/web/preview</link>
+    <link title="Web Latest">http://jbehave.org/reference/web/latest</link>
+  </section>
+  <section>
+    <name>Project Info</name>
+    <page>mailing-lists.html</page>
+    <page>issue-tracking.html</page>
+    <page>team-list.html</page>
+  </section>
+</sitemap>

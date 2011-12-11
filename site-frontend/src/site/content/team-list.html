@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>Team list</title>
+</head>
+<body>
+
+
+<h2>The Team</h2>
+<p>A successful project requires many people to play many roles.
+Some members write code or documentation, while others are valuable as
+testers, submitting patches and suggestions.</p>
+<p>The team is comprised of Members and Contributors. Members have
+direct access to the source of a project and actively evolve the
+code-base. Contributors improve the project through submission of
+patches and suggestions to the Members. The number of Contributors to
+the project is unbounded. Get involved today. All contributions to the
+project are greatly appreciated.</p>
+<h3>Members</h3>
+<p>The following is a list of developers with commit privileges that
+have directly contributed to the project in one way or another.</p>
+<table class="bodyTable">
+  <tr class="a">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Roles</th>
+    <th>Time Zone</th>
+    <th>Actual Time (GMT)</th>
+  </tr>
+  <tr class="b">
+    <td>tastapod</td>
+    <td>Dan North</td>
+    <td>administrator, developer</td>
+    <td>0</td>
+    <td><span id="developer-0">0</span></td>
+  </tr>
+  <tr class="a">
+    <td>sirenian</td>
+    <td>Elizabeth Keogh</td>
+    <td>administrator, developer</td>
+    <td>0</td>
+    <td><span id="developer-2">0</span></td>
+  </tr>
+  <tr class="b">
+    <td>mauro</td>
+    <td>Mauro Talevi</td>
+    <td>administrator, developer</td>
+    <td>0</td>
+    <td><span id="developer-3">0</span></td>
+  </tr>
+  <tr class="b">
+    <td>paul</td>
+    <td>Paul Hammant</td>
+    <td>developer</td>
+    <td>0</td>
+    <td><span id="developer-4">0</span></td>
+  </tr>
+</table>
+<h3>Contributors</h3>
+<table class="bodyTable">
+  <tr class="a">
+    <th>Name</th>
+  </tr>
+  <tr class="b">
+    <td>Adriano Bonat</td>
+  </tr>
+  <tr class="a">
+    <td>Cristiano Gaviao</td>
+  </tr>
+  <tr class="b">
+    <td>Gilles Scokart</td>
+  </tr>
+  <tr class="a">
+    <td>Bogdan Florea</td>
+  </tr>
+  <tr class="b">
+    <td>Stephen Cresswell</td>
+  </tr>
+  <tr class="a">
+    <td>Brian Repko</td>
+  </tr>
+  <tr class="b">
+    <td>Bruno Bieth</td>
+  </tr>
+  <tr class="a">
+    <td>Mirko Friedenhagen</td>
+  </tr>
+  <tr class="b">
+    <td>Tim Moore</td>
+  </tr>
+  <tr class="a">
+    <td>Tom Little</td>
+  </tr>
+  <tr class="b">
+    <td>Nino Martinez</td>
+  </tr>
+  <tr class="a">
+    <td>Warren Muller</td>
+  </tr>
+  <tr class="b">
+    <td>Martin Hutchinson</td>
+  </tr>
+  <tr class="a">
+    <td>Michael Zimmermann</td>
+  </tr>
+  <tr class="b">
+    <td>Mike Neeve</td>
+  </tr>
+  <tr class="a">
+    <td>Rob Daykin</td>
+  </tr>
+  <tr class="b">
+    <td>Douglas Padian</td>
+  </tr>
+  <tr class="a">
+    <td>James Ravn</td>
+  </tr>
+  <tr class="b">
+    <td>Jonathan Ross</td>
+  </tr>
+  <tr class="a">
+    <td>Ricardo S.A. Silva</td>
+  </tr>
+  <tr class="b">
+    <td>Chris Jensen</td>
+  </tr>
+  <tr class="a">
+    <td>Antonio Terreno</td>
+  </tr>
+  <tr class="b">
+    <td>Carlos Villela</td>
+  </tr>
+  <tr class="a">
+    <td>Chris "Business Value" Matts</td>
+  </tr>
+  <tr class="b">
+    <td>Damian Guy</td>
+  </tr>
+  <tr class="a">
+    <td>Felix Leipold</td>
+  </tr>
+  <tr class="b">
+    <td>Li Chaoqun</td>
+  </tr>
+  <tr class="a">
+    <td>Lindsay Terhorst North</td>
+  </tr>
+  <tr class="b">
+    <td>Manish Shah</td>
+  </tr>
+  <tr class="a">
+    <td>Olav Maassen</td>
+  </tr>
+  <tr class="b">
+    <td>Vyvyan Codd</td>
+  </tr>
+  <tr class="a">
+    <td>Patrick Hall</td>
+  </tr>
+  <tr class="b">
+    <td>Michael Hunger</td>
+  </tr>
+</table>
+<script type="text/javascript">
+function offsetDate(id, offset) {
+    var now = new Date();
+    var nowTime = now.getTime();
+    var localOffset = now.getTimezoneOffset();
+    var developerTime = nowTime + ( offset * 60 * 60 * 1000 ) + ( localOffset * 60 * 1000 );
+    var developerDate = new Date(developerTime);
+
+    document.getElementById(id).innerHTML = developerDate;
+}
+
+function init(){
+    offsetDate('developer-1', '0');
+    offsetDate('developer-2', '0');
+    offsetDate('developer-3', '0');
+    offsetDate('developer-4', '-8');
+}
+
+window.onLoad = init();
+</script>
+
+</body>
+
+</html>
