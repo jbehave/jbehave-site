@@ -15,7 +15,7 @@ for TYPE in "bin" "src"
 do
 INDEX="index-$TYPE-$VERSION.html"
 VERSIONED="$DOWNLOADS/$TYPE/$VERSION"
-URL="$NEXUS/org/jbehave/site/jbehave-site-frontend/$VERSION/jbehave-site-frontend-$VERSION-$TYPE.zip"
+URL="$NEXUS/org/jbehave/site/jbehave-site/$VERSION/jbehave-site-$VERSION-$TYPE.zip"
 DOWNLOAD="<html><head><meta http-equiv=\"REFRESH\" content=\"0;url=$URL\"></head></html>"
 echo $DOWNLOAD > target/$INDEX
 scp target/$INDEX jbehave.org:
