@@ -2,6 +2,7 @@
   <section>
     <name>About</name>
     <page>index.html</page>
+    <page>introduction.html</page>
     <page>license.html</page>
     <page>download.html</page>
     <page>tutorials.html</page>
