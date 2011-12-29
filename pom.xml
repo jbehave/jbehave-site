@@ -79,4 +79,12 @@
     <url>http://git.codehaus.org/gitweb.cgi?p=jbehave-site.git</url>
   </scm>
 
+  <profiles>
+    <profile>
+      <id>frontend</id>
+      <modules>
+        <module>site-frontend</module>
+      </modules>
+    </profile>
+  </profiles>
 </project>

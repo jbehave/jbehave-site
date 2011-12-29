@@ -25,36 +25,36 @@ have directly contributed to the project in one way or another.</p>
     <th>Id</th>
     <th>Name</th>
     <th>Roles</th>
-    <th>Time Zone</th>
-    <th>Actual Time (GMT)</th>
   </tr>
   <tr class="b">
     <td>tastapod</td>
     <td>Dan North</td>
     <td>administrator, developer</td>
-    <td>0</td>
-    <td><span id="developer-0">0</span></td>
   </tr>
   <tr class="a">
     <td>sirenian</td>
     <td>Elizabeth Keogh</td>
     <td>administrator, developer</td>
-    <td>0</td>
-    <td><span id="developer-2">0</span></td>
   </tr>
   <tr class="b">
     <td>mauro</td>
     <td>Mauro Talevi</td>
     <td>administrator, developer</td>
-    <td>0</td>
-    <td><span id="developer-3">0</span></td>
   </tr>
-  <tr class="b">
+  <tr class="a">
     <td>paul</td>
     <td>Paul Hammant</td>
     <td>developer</td>
-    <td>0</td>
-    <td><span id="developer-4">0</span></td>
+  </tr>
+  <tr class="b">
+    <td>cressie176</td>
+    <td>Stephen Cresswell</td>
+    <td>developer</td>
+  </tr>
+  <tr class="a">
+    <td>cvgraviao</td>
+    <td>Cristiano Gaviao</td>
+    <td>developer</td>
   </tr>
 </table>
 <h3>Contributors</h3>
@@ -66,16 +66,10 @@ have directly contributed to the project in one way or another.</p>
     <td>Adriano Bonat</td>
   </tr>
   <tr class="a">
-    <td>Cristiano Gaviao</td>
-  </tr>
-  <tr class="b">
-    <td>Gilles Scokart</td>
-  </tr>
-  <tr class="a">
     <td>Bogdan Florea</td>
   </tr>
   <tr class="b">
-    <td>Stephen Cresswell</td>
+    <td>Gilles Scokart</td>
   </tr>
   <tr class="a">
     <td>Brian Repko</td>
@@ -161,28 +155,61 @@ have directly contributed to the project in one way or another.</p>
   <tr class="b">
     <td>Michael Hunger</td>
   </tr>
+  <tr class="a">
+    <td>Alexander Lehmann</td>
+  </tr>
+  <tr class="b">
+    <td>Olmo Rigolo</td>
+  </tr>
+  <tr class="a">
+    <td>Jörgen Andersson</td>
+  </tr>  
+  <tr class="b">
+    <td>Seth Carter</td>
+  </tr>
+  <tr class="a">
+    <td>Bart De Neuter</td>
+  </tr>  
+  <tr class="b">
+    <td>Chris Kozak</td>
+  </tr>
+  <tr class="a">
+    <td>Dan Godfrey</td>
+  </tr>  
+  <tr class="b">
+    <td>Dennis Homann</td>
+  </tr>
+  <tr class="a">
+    <td>Derek Clarkson</td>
+  </tr>  
+  <tr class="b">
+    <td>David Batchelor</td>
+  </tr>
+  <tr class="a">
+    <td>Edgardo Hames</td>
+  </tr>  
+  <tr class="b">
+    <td>Eduardo Davis</td>
+  </tr>
+  <tr class="a">
+    <td>Louis Gueye</td>
+  </tr>  
+  <tr class="b">
+    <td>Emiliano Zilocchi</td>
+  </tr>  
+  <tr class="a">
+    <td>Aaron Walker</td>
+  </tr>  
+  <tr class="b">
+    <td>Alan Parkinson</td>
+  </tr>  
+  <tr class="a">
+    <td>Jaroslav Sedlacek</td>
+  </tr>  
+  <tr class="b">
+    <td>Larry Shatzer</td>
+  </tr>  
 </table>
-<script type="text/javascript">
-function offsetDate(id, offset) {
-    var now = new Date();
-    var nowTime = now.getTime();
-    var localOffset = now.getTimezoneOffset();
-    var developerTime = nowTime + ( offset * 60 * 60 * 1000 ) + ( localOffset * 60 * 1000 );
-    var developerDate = new Date(developerTime);
-
-    document.getElementById(id).innerHTML = developerDate;
-}
-
-function init(){
-    offsetDate('developer-1', '0');
-    offsetDate('developer-2', '0');
-    offsetDate('developer-3', '0');
-    offsetDate('developer-4', '-8');
-}
-
-window.onLoad = init();
-</script>
-
 </body>
 
 </html>
