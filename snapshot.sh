@@ -1,19 +1,21 @@
 set -e
 
-VERSION=$1
+NAME=$1
+VERSION=$2
 QUALIFIER="latest"
 
-if [ "$VERSION" == "" ] ; then
-  echo "usage: snapshot.sh <version>"
-  echo "e.g.: snapshot.sh 3.3-SNAPSHOT"
+if [ "$NAME" == "" ] || [ "$VERSION" == "" ]; then
+  echo "usage: shapshot.sh <artifact> <version>"
+  echo "e.g.: snapshot.sh jbehave 3.3-SNAPSHOT"
   exit;
 fi
 
 mvn clean deploy -Preporting,distribution
 
 CWD=`pwd`
+cd $CWD/../jbehave-site/site-upload
 
-cd $CWD/distribution
-./upload-download.sh $VERSION $QUALIFIER
-./upload-reference.sh $VERSION $QUALIFIER
-cd $CWD
+./upload-download.sh $NAME $VERSION $QUALIFIER
+./upload-reference.sh $NAME $VERSION $QUALIFIER
+
+CWD=`pwd`

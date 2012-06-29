@@ -31,10 +31,11 @@ mvn --batch-mode release:prepare -Preporting,distribution -DreleaseVersion=$VERS
 mvn release:perform -Preporting,distribution
 
 CWD=`pwd`
+cd $CWD/../jbehave-site/site-upload
 
-cd $CWD/distribution
-./upload-download.sh $VERSION $QUALIFIER
-./upload-reference.sh $VERSION $QUALIFIER
+./upload-download.sh $NAME $VERSION $QUALIFIER
+./upload-reference.sh $NAME $VERSION $QUALIFIER
+
 cd $CWD
 
 echo "The release $NAME $VERSION $QUALIFIER has been staged."
