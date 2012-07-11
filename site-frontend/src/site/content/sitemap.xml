@@ -17,6 +17,11 @@
     <link title="Web Preview">http://jbehave.org/reference/web/preview</link>
     <link title="Web Latest">http://jbehave.org/reference/web/latest</link>
   </section>
+  <section> 
+    <name>IDE Integration</name>
+    <page>eclipse-integration.html</page>
+    <link title="Eclipse Updates">http://jbehave.org/reference/eclipse/updates</link>
+  </section>
   <section>
     <name>Project Info</name>
     <page>mailing-lists.html</page>
