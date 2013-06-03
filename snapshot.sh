@@ -10,7 +10,7 @@ if [ "$NAME" == "" ] || [ "$VERSION" == "" ]; then
   exit;
 fi
 
-mvn clean deploy -Preporting,distribution
+mvn -U clean deploy -Preporting,distribution
 
 CWD=`pwd`
 cd $CWD/../jbehave-site/site-upload

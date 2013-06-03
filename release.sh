@@ -27,8 +27,9 @@ if [ "$NAME" == "" ] || [ "$VERSION" == "" ] || [ "$QUALIFIER" == "" ] || [ "$NE
   exit;
 fi
 
-mvn --batch-mode release:prepare -Preporting,distribution -DreleaseVersion=$VERSION -Dtag=$NAME-$VERSION -DdevelopmentVersion=$NEXT 
-mvn release:perform -Preporting,distribution
+PROFILES=atlassian,jenkins,reporting,distribution
+mvn --batch-mode release:prepare -P$PROFILES -DreleaseVersion=$VERSION -Dtag=$NAME-$VERSION -DdevelopmentVersion=$NEXT 
+mvn release:perform -P$PROFILES
 
 CWD=`pwd`
 cd $CWD/../jbehave-site/site-upload
