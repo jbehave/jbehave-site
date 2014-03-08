@@ -29,7 +29,7 @@ fi
 
 PROFILES=atlassian,jenkins,reporting,distribution
 mvn --batch-mode release:prepare -P$PROFILES -DreleaseVersion=$VERSION -Dtag=$NAME-$VERSION -DdevelopmentVersion=$NEXT 
-mvn release:perform -P$PROFILES
+mvn release:perform -P$PROFILES -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
 
 CWD=`pwd`
 cd $CWD/../jbehave-site/site-upload

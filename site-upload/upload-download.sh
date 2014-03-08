@@ -13,22 +13,22 @@ DOWNLOADS="/var/www/jbehave.org/reference/downloads"
 GROUP_ID="org.jbehave"
 GROUP_PATH="org/jbehave"
 ARTIFACT_ID="jbehave-distribution"
-PATH=""
+RELATIVE_PATH=""
 # TODO replace with regex extraction
 if [ "$ARTIFACT" == "jbehave-site" ] ; then
   GROUP_ID="org.jbehave.site"
   GROUP_PATH="org/jbehave/site"
   ARTIFACT_ID="jbehave-site-frontend"
-  PATH="site"
+  RELATIVE_PATH="site"
 elif [ "$ARTIFACT" == "jbehave-web" ] ; then
   GROUP_ID="org.jbehave.web"
   GROUP_PATH="org/jbehave/web"
   ARTIFACT_ID="jbehave-web-distribution"
-  PATH="web"
+  RELATIVE_PATH="web"
 fi
 
-if [ "$PATH" != "" ] ; then
-  DOWNLOADS="$DOWNLOADS/$PATH"
+if [ "$RELATIVE_PATH" != "" ] ; then
+  DOWNLOADS="$DOWNLOADS/$RELATIVE_PATH"
 fi
 
 NEXUS="https://nexus.codehaus.org/content/repositories/releases"
@@ -40,7 +40,7 @@ VERSIONED="$DOWNLOADS/$TYPE/$VERSION"
 URL="$NEXUS/$GROUP_PATH/$ARTIFACT_ID/$VERSION/$ARTIFACT_ID-$VERSION-$TYPE.zip"
 DOWNLOAD="<html><head><meta http-equiv=\"REFRESH\" content=\"0;url=$URL\"></head></html>"
 echo $DOWNLOAD > target/$INDEX
-/usr/bin/scp target/$INDEX jbehave.org:uploads
-/usr/bin/ssh jbehave.org "mkdir -p $VERSIONED; mv uploads/$INDEX $VERSIONED/index.html; cd $DOWNLOADS/$TYPE; rm $QUALIFIER; ln -s $VERSION $QUALIFIER"
+scp target/$INDEX jbehave.org:uploads
+ssh jbehave.org "mkdir -p $VERSIONED; mv uploads/$INDEX $VERSIONED/index.html; cd $DOWNLOADS/$TYPE; rm $QUALIFIER; ln -s $VERSION $QUALIFIER"
 done 
 
