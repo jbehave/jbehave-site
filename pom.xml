@@ -7,7 +7,7 @@
   </parent>
   <groupId>org.jbehave.site</groupId>
   <artifactId>jbehave-site</artifactId>
-  <version>3.2</version>
+  <version>3.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>JBehave Site</name>
   <description>JBehave Site provide site resources and templates for use by JBehave documentations and distributions</description>
@@ -83,7 +83,7 @@
     <connection>scm:git:git://git.codehaus.org/jbehave-site.git</connection>
     <developerConnection>scm:git:ssh://git@git.codehaus.org/jbehave-site.git</developerConnection>
     <url>http://git.codehaus.org/gitweb.cgi?p=jbehave-site.git</url>
-    <tag>jbehave-site-3.2</tag>
+    <tag>HEAD</tag>
   </scm>
 
 </project>
