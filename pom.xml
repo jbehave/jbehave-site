@@ -13,9 +13,16 @@
   <name>JBehave Site</name>
   <description>JBehave Site provide site resources and templates for use by JBehave documentations and distributions</description>
 
+  <properties>
+    <!-- NOTE: Set -Dfile.encoding=UTF-8 in MAVEN_OPTS -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <resource.encoding>UTF-8</resource.encoding>
+  </properties>
+  
   <modules>
     <module>site-resources</module>
     <module>site-templates</module>
+    <module>site-frontend</module>
   </modules>
 
   <build>
@@ -79,12 +86,4 @@
     <url>http://git.codehaus.org/gitweb.cgi?p=jbehave-site.git</url>
   </scm>
 
-  <profiles>
-    <profile>
-      <id>frontend</id>
-      <modules>
-        <module>site-frontend</module>
-      </modules>
-    </profile>
-  </profiles>
 </project>
