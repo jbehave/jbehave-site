@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
   <name>JBehave Site Front-End</name>
   <properties>
-    <jbehave.site.version>3.1.1</jbehave.site.version>
+    <jbehave.site.version>${project.version}</jbehave.site.version>
   </properties>
   <build>
     <plugins>
