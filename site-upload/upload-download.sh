@@ -25,6 +25,11 @@ elif [ "$ARTIFACT" == "jbehave-web" ] ; then
   GROUP_PATH="org/jbehave/web"
   ARTIFACT_ID="jbehave-web-distribution"
   RELATIVE_PATH="web"
+elif [ "$ARTIFACT" == "jbehave-eclipse" ] ; then
+  GROUP_ID="org.jbehave.eclipse"
+  GROUP_PATH="org/jbehave/eclipse"
+  ARTIFACT_ID="org.jbehave.eclipse.repository"
+  RELATIVE_PATH="eclipse"
 fi
 
 if [ "$RELATIVE_PATH" != "" ] ; then
