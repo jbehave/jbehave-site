@@ -13,7 +13,7 @@ fi
 mvn -U clean deploy -Preporting,distribution
 
 CWD=`pwd`
-cd $CWD/../jbehave-site/site-upload
+cd $CWD/../site/site-upload
 
 ./upload-download.sh $NAME $VERSION $QUALIFIER
 ./upload-reference.sh $NAME $VERSION $QUALIFIER

@@ -32,7 +32,7 @@ mvn --batch-mode release:prepare -P$PROFILES -DreleaseVersion=$VERSION -Dtag=$NA
 mvn release:perform -P$PROFILES -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
 
 CWD=`pwd`
-cd $CWD/../jbehave-site/site-upload
+cd $CWD/../site/site-upload
 
 ./upload-download.sh $NAME $VERSION $QUALIFIER
 ./upload-reference.sh $NAME $VERSION $QUALIFIER
