@@ -48,7 +48,7 @@ entry=page>
 <div class="clear"></div>
 <div id="footer">
 <div class="left">Version ${publishedVersion} published on ${publishedDate?string("dd/MM/yyyy")}</div>
-<div class="right">&#169; 2003-2014</div>
+<div class="right">&#169; 2003-2015</div>
 <div class="clear"></div>
 </div>
 
