@@ -27,11 +27,13 @@ if [ "$NAME" == "" ] || [ "$VERSION" == "" ] || [ "$QUALIFIER" == "" ] || [ "$NE
   exit;
 fi
 
-PROFILES=atlassian,jenkins,reporting,distribution
-mvn --batch-mode release:prepare -P$PROFILES -DreleaseVersion=$VERSION -Dtag=$NAME-$VERSION -DdevelopmentVersion=$NEXT 
-mvn release:perform -P$PROFILES -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
-
 CWD=`pwd`
+MVN="mvn -s $CWD/../site/settings-nexus.xml" 
+PROFILES=reporting,distribution
+
+$MVN --batch-mode release:prepare -P$PROFILES -DreleaseVersion=$VERSION -Dtag=$NAME-$VERSION -DdevelopmentVersion=$NEXT 
+$MVN release:perform -P$PROFILES -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+
 cd $CWD/../site/site-upload
 
 ./upload-download.sh $NAME $VERSION $QUALIFIER
