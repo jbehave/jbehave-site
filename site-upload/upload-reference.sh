@@ -33,9 +33,11 @@ fi
 VERSIONED_REFERENCE="$REFERENCE/$VERSION"
 
 echo "Uploading artifact $ARTIFACT_FULL"
-rm -rf target
-mvn -U org.apache.maven.plugins:maven-dependency-plugin:2.8:get -Dartifact=$ARTIFACT_FULL -Dtransitive=false -Ddest=target/$ZIPPED_ARTIFACT
-scp target/$ZIPPED_ARTIFACT jbehave.org:uploads/
+
+GET="mvn -q -U org.apache.maven.plugins:maven-dependency-plugin:2.10:get"
+DEST=target/$ZIPPED_ARTIFACT
+$GET -Dartifact=$ARTIFACT_FULL -Dtransitive=false -Ddest=$DEST
+scp $DEST jbehave.org:uploads/
 
 echo "Creating reference $VERSIONED_REFERENCE"
 ssh jbehave.org "rm -rf $VERSIONED_UPLOAD; unzip -q -d uploads uploads/$ZIPPED_ARTIFACT; rm -r $VERSIONED_REFERENCE; mv $VERSIONED_UPLOAD/docs/ $VERSIONED_REFERENCE; rm uploads/$ZIPPED_ARTIFACT; rm -r $VERSIONED_UPLOAD; cd $REFERENCE; rm $QUALIFIER; ln -s $VERSION $QUALIFIER"
