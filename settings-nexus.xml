@@ -8,6 +8,18 @@
   </mirrors>
   <profiles>
     <profile>
+      <id>release</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <gpg.passphrase></gpg.passphrase>
+      </properties>
+    </profile>
+    <profile>
       <id>nexus</id>
       <repositories>
         <repository>
