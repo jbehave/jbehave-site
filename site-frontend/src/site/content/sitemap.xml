@@ -22,6 +22,7 @@
     <name>IDE Integration</name>
     <page>eclipse-integration.html</page>
     <link title="Eclipse Updates">http://jbehave.org/reference/eclipse/updates</link>
+    <page>idea-integration.html</page>
   </section>
   <section>
     <name>Project Info</name>
