@@ -1,8 +1,7 @@
 language: java
-env: MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
-install: /bin/true
-script: mvn clean install | grep -v -E "Download(ed|ing)"
+install: mvn install -s settings.xml -DskipTests=true -Dmaven.javadoc.skip=true --batch-mode -e --quiet
 jdk:
-  - openjdk6
-  - openjdk7
-  - oraclejdk7
+  - oraclejdk8
+script: mvn install -s settings.xml -P examples --batch-mode -e
+
+
