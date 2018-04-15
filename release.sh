@@ -1,20 +1,5 @@
 #!/usr/bin/env bash
 set -e
-# Requires the 'release' profile in your ~/.m2/settings.xml
-# If pgp.passphrase property in 'release' profile is not provided, it will be prompted.
-#
-#    <profile>
-#      <id>release</id>
-#      <activation>
-#        <name>performRelease</name>
-#        <property>
-#          <value>true</value>
-#        </property>
-#      </activation>
-#      <properties>
-#        <gpg.passphrase>[Your pgp passphrase]</gpg.passphrase>
-#      </properties>
-#    </profile>
 
 NAME=$1
 VERSION=$2
