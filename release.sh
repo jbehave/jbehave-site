@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 # Requires the 'release' profile in your ~/.m2/settings.xml
+# If pgp.passphrase property in 'release' profile is not provided, it will be prompted.
 #
 #    <profile>
 #      <id>release</id>
@@ -22,9 +23,13 @@ NEXT=$4
 
 if [ "$NAME" == "" ] || [ "$VERSION" == "" ] || [ "$QUALIFIER" == "" ] || [ "$NEXT" == "" ] ; then
   echo "usage: release.sh <name> <version> <qualifier> <next>"
-  echo "e.g.: release.sh jbehave 4.3-beta-1 preview 4.3-SNAPSHOT"
-  echo "e.g.: release.sh jbehave 4.3 stable 4.4-SNAPSHOT"
-  echo "N.B.: if you don't define the pgp.passphrase property in a 'release' profile (c.f. setup at top of script), it will be prompted."
+  echo "Name:       jbehave|jbehave-site|jbehave-web"
+  echo "Version:    release version"
+  echo "Qualifier:  stable|preview"
+  echo "Next:       next snapshot version"
+  echo "Examples:"
+  echo "            release.sh jbehave 4.3 stable 4.4-SNAPSHOT"
+  echo "            release.sh jbehave 4.3-beta-1 preview 4.4-SNAPSHOT"
   exit;
 fi
 
