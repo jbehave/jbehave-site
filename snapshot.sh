@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 
 NAME=$1
@@ -6,7 +7,7 @@ QUALIFIER="latest"
 
 if [ "$NAME" == "" ] || [ "$VERSION" == "" ]; then
   echo "usage: shapshot.sh <artifact> <version>"
-  echo "e.g.: snapshot.sh jbehave 3.3-SNAPSHOT"
+  echo "e.g.: snapshot.sh jbehave 4.3-SNAPSHOT"
   exit;
 fi
  
