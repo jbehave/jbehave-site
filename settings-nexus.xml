@@ -2,7 +2,7 @@
   <mirrors>
     <mirror>
       <id>nexus</id>
-      <mirrorOf>external:*</mirrorOf>
+      <mirrorOf>central</mirrorOf>
       <url>http://localhost:8081/nexus/content/groups/public</url>
     </mirror>
   </mirrors>
@@ -38,9 +38,49 @@
         </pluginRepository>
       </pluginRepositories>
     </profile>
+    <profile>
+      <!-- Required for dependencies of Google module -->
+      <id>atlassian</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>atlassian</id>
+          <url>http://maven.atlassian.com/public</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>atlassian</id>
+          <url>http://maven.atlassian.com/public</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+    <profile>
+      <!-- Required for dependencies of Jenkins module -->
+      <id>jenkins</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>jenkins</id>
+          <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>jenkins</id>
+          <url>https://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
   </profiles>
   <activeProfiles>
     <activeProfile>nexus</activeProfile>
+    <activeProfile>atlassian</activeProfile>
+    <activeProfile>jenkins</activeProfile>
   </activeProfiles>
    <servers>
     <server>
