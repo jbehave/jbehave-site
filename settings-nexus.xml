@@ -82,14 +82,9 @@
     <activeProfile>atlassian</activeProfile>
     <activeProfile>jenkins</activeProfile>
   </activeProfiles>
-   <servers>
+  <servers>
     <server>
-      <id>sonatype-nexus-snapshots</id>
-      <username>${env.SONATYPE_USERNAME}</username>
-      <password>${env.SONATYPE_PASSWORD}</password>
-    </server>
-    <server>
-      <id>sonatype-nexus-staging</id>
+      <id>sonatype-nexus-oss</id>
       <username>${env.SONATYPE_USERNAME}</username>
       <password>${env.SONATYPE_PASSWORD}</password>
     </server>

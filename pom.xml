@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.jbehave</groupId>
     <artifactId>jbehave-pom</artifactId>
-    <version>2</version>
+    <version>3</version>
   </parent>
   <groupId>org.jbehave.site</groupId>
   <artifactId>jbehave-site</artifactId>
@@ -38,9 +38,9 @@
   </build>
 
   <scm>
-    <connection>scm:git:git://github.com/jbehave/jbehave-site.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/jbehave/jbehave-site.git</developerConnection>
-    <url>https://github.com/jbehave/jbehave-site</url>
+    <connection>scm:git:git://bitbucket.org/jbehave/jbehave-site.git</connection>
+    <developerConnection>scm:git:ssh://git@bitbucket.org/jbehave/jbehave-site.git</developerConnection>
+    <url>https://bitbucket.org/jbehave/jbehave-site</url>
     <tag>HEAD</tag>
   </scm>
 
