@@ -13,13 +13,13 @@ if [ "$NAME" == "" ] || [ "$VERSION" == "" ] || [ "$QUALIFIER" == "" ] || [ "$NE
   echo "Qualifier:  stable|preview"
   echo "Next:       next snapshot version"
   echo "Examples:"
-  echo "            release.sh jbehave 4.3 stable 4.4-SNAPSHOT"
-  echo "            release.sh jbehave 4.3-beta-1 preview 4.4-SNAPSHOT"
+  echo "            release.sh jbehave 5.0 stable 5.1-SNAPSHOT"
+  echo "            release.sh jbehave 5.0-beta-1 preview 5.0-SNAPSHOT"
   exit;
 fi
 
 CWD=`pwd`
-MVN="mvn -s $CWD/../site/settings-nexus.xml" 
+MVN="mvn -s $CWD/../site/settings.xml"
 PROFILES=reporting,distribution
 
 $MVN --batch-mode release:prepare -P$PROFILES -DreleaseVersion=$VERSION -Dtag=$NAME-$VERSION -DdevelopmentVersion=$NEXT 

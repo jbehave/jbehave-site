@@ -15,7 +15,7 @@ set -e
 #    </profile>
 
 CWD=`pwd`
-MVN="mvn -s $CWD/../site/settings-nexus.xml" 
+MVN="mvn -s $CWD/../site/settings.xml"
 PROFILES=sonatype-oss-release,release
 
 $MVN deploy -P$PROFILES

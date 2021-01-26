@@ -12,7 +12,7 @@ if [ "$NAME" == "" ] || [ "$VERSION" == "" ]; then
 fi
  
 CWD=`pwd`
-MVN="mvn -s $CWD/../site/settings-nexus.xml" 
+MVN="mvn -s $CWD/../site/settings.xml"
 PROFILES=reporting,distribution
 
 $MVN -U clean deploy -P$PROFILES
