@@ -34,10 +34,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Install
-        shell: bash
-        run: mvn install -s settings.xml -DskipTests=true -Dmaven.javadoc.skip=true --batch-mode -e --quiet
-
       - name: Build
         shell: bash
-        run: mvn install -s settings.xml -P examples --batch-mode -e
+        run: mvn clean install
