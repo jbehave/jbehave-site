@@ -1,9 +1,9 @@
 <settings>
   <mirrors>
     <mirror>
-      <id>nexus</id>
+      <id>artifactory</id>
       <mirrorOf>central</mirrorOf>
-      <url>http://localhost:8081/nexus/content/groups/public</url>
+      <url>http://localhost:8082/artifactory/maven-remote/</url>
     </mirror>
   </mirrors>
   <profiles>
@@ -40,7 +40,7 @@
     </profile>
   </profiles>
   <activeProfiles>
-    <activeProfile>nexus</activeProfile>
+    <activeProfile>artifactory</activeProfile>
   </activeProfiles>
   <servers>
     <server>
