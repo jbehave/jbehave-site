@@ -36,7 +36,7 @@ if [ "$RELATIVE_PATH" != "" ] ; then
   DOWNLOADS="$DOWNLOADS/$RELATIVE_PATH"
 fi
 
-NEXUS="https://oss.sonatype.org/content/repositories/releases"
+NEXUS="https://s01.oss.sonatype.org/content/repositories/releases"
 
 for TYPE in "bin" "src"
 do

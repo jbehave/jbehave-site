@@ -35,6 +35,6 @@ cd $CWD
 echo "The release $NAME $VERSION $QUALIFIER has been staged."
 
 echo "Next steps are:"
-echo "- Nexus Staging Repository (https://oss.sonatype.org/index.html#stagingRepositories) to close and release the jbehave staging."
+echo "- Nexus Staging Repository (https://s01.oss.sonatype.org/index.html#stagingRepositories) to close and release the jbehave staging."
 echo "- git push changes to remotes"
 
