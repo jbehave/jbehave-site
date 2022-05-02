@@ -7,7 +7,7 @@ QUALIFIER="latest"
 
 if [ "$NAME" == "" ] || [ "$VERSION" == "" ]; then
   echo "usage: shapshot.sh <artifact> <version>"
-  echo "e.g.: snapshot.sh jbehave 4.3-SNAPSHOT"
+  echo "e.g.: snapshot.sh jbehave 5.0-SNAPSHOT"
   exit;
 fi
  
