@@ -1,12 +1,31 @@
 <settings>
-  <mirrors>
-    <mirror>
-      <id>artifactory</id>
-      <mirrorOf>central</mirrorOf>
-      <url>http://localhost:8082/artifactory/maven-remote/</url>
-    </mirror>
-  </mirrors>
   <profiles>
+    <profile>
+      <id>mirror</id>
+      <mirrors>
+        <mirror>
+          <id>artifactory</id>
+          <mirrorOf>central</mirrorOf>
+          <url>http://localhost:8082/artifactory/maven-remote/</url>
+        </mirror>
+      </mirrors>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
     <profile>
       <id>release</id>
       <activation>
@@ -19,29 +38,7 @@
         <gpg.passphrase></gpg.passphrase>
       </properties>
     </profile>
-    <profile>
-      <id>nexus</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>http://central</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-      </repositories>
-     <pluginRepositories>
-        <pluginRepository>
-          <id>central</id>
-          <url>http://central</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>true</enabled></snapshots>
-        </pluginRepository>
-      </pluginRepositories>
-    </profile>
   </profiles>
-  <activeProfiles>
-    <activeProfile>artifactory</activeProfile>
-  </activeProfiles>
   <servers>
     <server>
       <id>sonatype-nexus-oss</id>
